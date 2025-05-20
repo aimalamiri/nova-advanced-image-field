@@ -1,5 +1,5 @@
 {
-    "name": "ctessier/nova-advanced-image-field",
+    "name": "aimalamiri/nova-advanced-image-field",
     "description": "An advanced image field for Nova with cropping and resizing.",
     "keywords": [
         "laravel",
