@@ -51,7 +51,7 @@ class AdvancedImage extends Image
     protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute): mixed
     {
         if (empty($request->{$requestAttribute})) {
-            return;
+            return null;
         }
 
         $previousFileName = $model->{$attribute} ?? null;
