@@ -48,7 +48,7 @@ class AdvancedImage extends Image
      *
      * @return void
      */
-    protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute)
+    protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute): mixed
     {
         if (empty($request->{$requestAttribute})) {
             return;
@@ -63,6 +63,8 @@ class AdvancedImage extends Image
         if ($previousFileName !== null) {
             Storage::disk($this->disk)->delete($previousFileName);
         }
+
+        return $previousFileName;
     }
 
     /**
